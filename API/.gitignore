@@ -1,0 +1,7 @@
+node_modules
+.idea
+config/index.js
+public/uploads
+public/doc
+public/temp
+package-lock.json

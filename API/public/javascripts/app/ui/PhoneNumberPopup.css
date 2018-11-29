@@ -1,0 +1,50 @@
+.iti-flag {
+    background-image: url('../../node_modules/intl-tel-input/build/img/flags.png');
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .iti-flag {
+        background-image: url('../../node_modules/intl-tel-input/build/img/flags@2x.png');
+    }
+}
+
+.intl-tel-input {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.intl-tel-input .country-list {
+    width: 100%;
+}
+
+.intl-tel-input .selected-flag {
+    outline: none;
+}
+
+.intl-tel-input .flag-container {
+    width: 100%;
+}
+
+.popupS-base.popupS-open > div:nth-child(3) {
+    overflow-y: hidden;
+}
+
+.iti-mobile .intl-tel-input.iti-container {
+    z-index: 10001;
+    width: calc(100% - 60px);
+}
+
+.link-container {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.link-container > a {
+    color: rgb(165, 171, 179);
+}
+
+.link-container > a:first-child {
+    margin-right: 0.5rem;
+}

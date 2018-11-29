@@ -1,0 +1,397 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 5;
+    padding: 2.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../../static/img/logo.svg) no-repeat center;
+    background-size: contain;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
+    transition: all ease-out 0.3s;
+}
+
+.background:nth-child(1) {
+    z-index: 3;
+}
+
+.background:nth-child(2) {
+    z-index: 2;
+}
+
+.background:nth-child(3) {
+    z-index: 1;
+}
+
+.b-video-player__video, .b-video-player__preview-image {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .b-video-player__video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .b-video-player__video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media (min-width: 640px) {
+    .b-video-player__video {
+        min-width: 100%;
+        width: auto;
+        min-height: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.with-image {
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.default {
+    background-color: rgb(237, 239, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.default-course-icon {
+    width: 5rem;
+    height: 5rem;
+    background: url(../../static/img/logo-grey.svg) no-repeat center;
+    background-size: contain;
+}
+
+.course-content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
+    transition: all 0.5s;
+    box-sizing: border-box;
+    margin-top: 70vh;
+}
+
+.course-title {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.course-header {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.violet {
+    color: rgb(155, 122, 255);
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.course-subheader {
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: normal;
+}
+
+.course-description {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    word-break: break-word;
+    word-spacing: normal;
+}
+
+.b-schedule {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.b-schedule-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.b-schedule-item:last-child {
+    margin-bottom: 0;
+}
+
+.b-schedule-item .b-schedule-item-date {
+    border-radius: 100%;
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: rgb(52, 55, 57);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.b-schedule-item .b-schedule-item-date:after {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 2px;
+    height: 1.5rem;
+    background-color: rgb(52, 55, 57);
+}
+
+.b-schedule-item:first-child .b-schedule-item-date:after {
+    content: none;
+}
+
+.b-schedule-item-date .b-schedule-item-date__month {
+    display: block;
+    margin-top: 0.625rem;
+    height: 1rem;
+    opacity: 0.7;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.b-schedule-item-date .b-schedule-item-date__number {
+    display: block;
+    height: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.b-schedule-item .b-schedule-item-desc {
+    color: white;
+}
+
+.b-schedule-item-desc .b-schedule-item-time {
+    opacity: 0.69;
+    font-size: 0.75rem;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.b-schedule-item-desc .b-schedule-item-title {
+    margin: 0;
+    max-width: 100%;
+    max-height: 46px;
+    overflow: hidden;
+    font-size: 0.85rem;
+    line-height: 1.64;
+    text-align: left;
+    font-weight: 400;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.subscribe-btn {
+    width: 100%;
+    height: 2.69rem;
+    line-height: 2.69rem;
+    padding: 0 1.375rem;
+    border-radius: 6.25rem;
+    background-color: #6900ff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    outline: none;
+    flex-shrink: 0;
+    display: block;
+}
+
+.subscribe-btn:hover {
+    background-color: #6400DE;
+}
+
+.subscribe-btn:active {
+    background-color: #6900ff;
+}
+
+.subscribe-btn .subscribe-btn__price {
+    height: 19px;
+    opacity: 0.7;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.arrow {
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem auto 0 auto;
+    background: url(../../static/img/arrow.svg) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.show .arrow.mobile {
+    visibility: hidden;
+}
+
+.show .arrow {
+    transform: rotateX(180deg);
+}
+
+/*Responsive*/
+@media (min-width: 750px) and (orientation: portrait) {
+    html {
+        font-size: 32px;
+    }
+
+    .course-content {
+        width: 100%;
+        padding: 2rem 2.5rem;
+    }
+
+    .header {
+        width: 100%;
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (min-width: 1000px) and (orientation: landscape) {
+    html {
+        font-size: 32px;
+    }
+
+    .course-content {
+        width: 100%;
+        padding: 2rem 2.5rem;
+    }
+
+    .header {
+        width: 100%;
+        padding: 2rem 2.5rem;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 10px;
+    }
+}
+
+.notransition {
+    transition: none !important;
+}
+
+.progress-wrapper {
+    position: absolute;
+    width: calc(100% - 1rem);
+    display: flex;
+    height: 2px;
+    top: 5px;
+    padding: 0 0.5rem;
+    z-index: 4;
+}
+
+.progress-container {
+    height: 2px;
+    width: 100%;
+    flex: 1;
+    margin: 0 0.15rem;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.progress-value {
+    background-color: #fff;
+    height: 2px;
+    width: 0;
+    transition: width ease-out 0.3s;
+}
+
+.image-progress-animation {
+    transition-duration: 3s;
+}
+

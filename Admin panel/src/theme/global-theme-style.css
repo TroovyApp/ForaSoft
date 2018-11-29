@@ -1,0 +1,63 @@
+@import "helpers/mpwh-helpers.css";
+
+#root {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.alignCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.colorBgNone {
+    background-color: transparent !important;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.longString {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.customLoader .loader:after {
+    border-color: #6900ff transparent transparent !important
+}
+
+td, th {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.ui.modals {
+    display: flex !important;
+    margin-top: 0 !important;
+}
+
+.ui.modal {
+    margin-top: 0 !important;
+}

@@ -1,0 +1,51 @@
+module.exports = {
+    "port": 15030,
+    "host": "localhost",
+    "env": "development",
+    "mongodb_server":"mongodb://localhost:27017/troovy",
+    "twilioPhoneNumber": "",
+    "twilioAccountSid": "",
+    "twilioAuthToken": "",
+    "stripeSecretKey": "",
+     "stripePublicKey": "",
+    "kurentoURL": "http://localhost:8888/kurento",
+    "instanceName": "troovy_localhost",
+    "iceServers" : {
+        "stuns": [{
+            "url": "stun.l.google.com:19302",
+        },
+        {
+            "url": "stun1.l.google.com:19302",
+        }],
+        "turns": [{
+            "url" : "turn:255.255.255.255:9999",
+            "username" : "*******",
+            "credential" : "*******"
+        }]
+    },
+    "adminProfile": {
+        "email" : "admin@test.ru",
+        "login" : "admin",
+        "password" : "58aZNxGWVW7Fm6pMYyHj"
+    },
+    "corsOrigin": [],
+    "cookieSessionSecret" : "JDxI8U5bkR",
+    "ffmpegBin": "/usr/local/bin/ffmpeg-n3.3.3",
+     "mailTransport": {
+             "type": "smtp",
+             "host": "smtp.gmail.com",
+             "port": 465,
+             "secure": true,
+             "auth": {
+                 "user": "",
+                 "pass": ""
+             },
+             "tls": {
+                 "rejectUnauthorized": false
+             }
+         },
+     "mailFrom": "",
+     "instanceURL": "http://localhost:15030",
+     "frontendURL": "http://localhost:15030",
+     "branchKey": "your_branch_key"
+};

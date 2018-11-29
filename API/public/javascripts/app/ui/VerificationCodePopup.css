@@ -1,0 +1,31 @@
+.verify-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.code-input {
+    outline: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 0;
+    margin: 0 0.25rem;
+    border-bottom: 4px solid rgb(219, 222, 226);
+}
+
+.code-input:focus, .code-input.full {
+    border-bottom: 4px solid rgb(105, 0, 255);
+}
+
+.info {
+    color: rgb(51, 51, 61);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}

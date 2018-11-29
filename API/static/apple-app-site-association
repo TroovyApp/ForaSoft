@@ -1,0 +1,19 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "62QHGWVLXD.com.troovy.forasoft.dev",
+                "paths": [ "*" ]
+            },
+            {
+                "appID": "62QHGWVLXD.com.troovy.forasoft.test",
+                "paths": [ "*" ]
+            },
+            {
+                "appID": "62QHGWVLXD.com.troovy.forasoft.demo",
+                "paths": [ "*" ]
+            }
+        ]
+    }
+}

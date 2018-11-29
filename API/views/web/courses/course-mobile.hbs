@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{htmlTitle}}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/web/reset.css">
+
+    <link type="text/css" rel="stylesheet" href="/javascripts/sticky/sticky.min.css">
+    <link type="text/css" rel="stylesheet" href="/javascripts/node_modules/popups/css/popupS.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="/javascripts/node_modules/intl-tel-input/build/css/intlTelInput.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/web/style-mobile.css">
+    <link type="text/css" rel="stylesheet" href="/javascripts/dist/index.css"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{htmlTitle}}"/>
+    <meta property="og:description" content="{{description}}"/>
+    <meta property="description" content="{{description}}"/>
+    <meta property="og:image" content="{{courseImageSharingUrl}}"/>
+    <meta property="og:url" content="{{webpage}}">
+    <meta property="twitter:title" content="{{htmlTitle}}"/>
+    <meta property="twitter:image" content="{{courseImageSharingUrl}}"/>
+</head>
+<body>
+<div class="carousel">
+    {{#each intro}}
+        <div class="background b-preview b-video-player" {{#if this.isImage}}data-is-image="true"{{/if}}>
+            {{#if this.isImage}}
+                <div class="b-video-player__preview-image with-image"
+                     style="background-image: url({{this.fileUrl}})"></div>
+            {{else}}
+                <video src="{{this.fileUrl}}"
+                       muted="muted"
+                       preload="auto"
+                       playsinline
+                       poster="{{this.fileThumbnailUrl}}"
+                       class="b-video-player__video js-video"
+                />
+            {{/if}}
+        </div>
+    {{else}}
+        <div class="b-video-player__preview-image default">
+            <div class="default-course-icon"></div>
+        </div>
+    {{/each}}
+    <div class="progress-wrapper">
+
+    </div>
+</div>
+
+<section class="container">
+    <header class="header">
+        <div class="logo"></div>
+        <div class="auth-container" id="auth-container"></div>
+    </header>
+
+    <div class="course-content show">
+        <div class="course-header">
+            <h1 class="course-title">
+                {{title}}
+            </h1>
+            By <span class="violet bold">{{creatorName}}</span>
+        </div>
+        <div class="course-description">
+            {{description}}
+        </div>
+
+        {{#if sessions.length}}
+            <h2 class="course-subheader">
+                Workshop schedule
+            </h2>
+            <ul class="b-schedule">
+                {{#each sessions}}
+                    <li class="b-schedule-item">
+                        <div class="b-schedule-item-date">
+                            <span class="b-schedule-item-date__month">{{this.startInfo.month}}</span>
+                            <span class="b-schedule-item-date__number">{{this.startInfo.day}}</span>
+                        </div>
+                        <div class="b-schedule-item-desc">
+                            <time class="b-schedule-item-time"
+                                  datetime="{{this.startInfo.datetime}}">{{this.startInfo.time}}</time>
+                            <h3 class="b-schedule-item-title">{{this.title}}</h3>
+                        </div>
+                    </li>
+                    <li class="b-schedule-item">
+                        <div class="b-schedule-item-date">
+                            <span class="b-schedule-item-date__month">{{this.startInfo.month}}</span>
+                            <span class="b-schedule-item-date__number">{{this.startInfo.day}}</span>
+                        </div>
+                        <div class="b-schedule-item-desc">
+                            <time class="b-schedule-item-time"
+                                  datetime="{{this.startInfo.datetime}}">{{this.startInfo.time}}</time>
+                            <h3 class="b-schedule-item-title">{{this.title}}</h3>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+        <button class="subscribe-btn js-subscribe-btn" courseId="{{id}}">
+            Subscribe
+            {{#if description}}
+                <span class="subscribe-btn__price">
+                </span>
+            {{/if}}
+        </button>
+    </div>
+</section>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/javascripts/node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="/javascripts/node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+<script src="/javascripts/sticky/sticky.min.js"></script>
+<script src="/javascripts/browser-deeplink.js"></script>
+<script src="/javascripts/node_modules/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+<script src="/javascripts/main.js"></script>
+<script>
+    window.config = {
+        API_URL: "{{apiUrl}}",
+        STRIPE_KEY: "{{stripeKey}}",
+        coursePrice: "{{price}}",
+        courseCurrency: "{{currency}}",
+        courseId: "{{id}}",
+        creator: "{{creatorId}}",
+        subscribers: [
+            {{#each subscribers}}
+                "{{this}}",
+            {{/each}}
+        ],
+        courseLink: "{{courseLink}}",
+        isMobile: {{isMobile}},
+        intro: [
+            {{#each intro}}
+                {
+                    fileUrl: "{{this.fileUrl}}",
+                    thumbnailUrl: "{{this.fileThumbnailUrl}}",
+                    type: {{this.type}},
+                    id: "{{this.id}}"
+                },
+            {{/each}}
+        ]
+    }
+</script>
+<script src="/javascripts/dist/index.js"></script>
+</body>
+</html>
+
+
+

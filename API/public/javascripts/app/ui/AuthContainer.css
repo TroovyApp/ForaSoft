@@ -1,0 +1,20 @@
+.logout {
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+}
+
+.auth-container {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 2rem;
+    background: center no-repeat;
+    background-size: contain;
+    height: 2rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}

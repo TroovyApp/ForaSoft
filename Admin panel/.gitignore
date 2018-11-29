@@ -1,0 +1,17 @@
+node_modules
+.idea
+build
+
+.env.development.local
+.env.production.local
+.env.testing.local
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

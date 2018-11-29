@@ -1,0 +1,6 @@
+framework module EMPageViewController {
+  umbrella header "EMPageViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,111 @@
+PODS:
+  - Alamofire (4.6.0)
+  - Branch (0.25.0):
+    - Branch/Core (= 0.25.0)
+  - Branch/Core (0.25.0)
+  - EMPageViewController (3.0.0)
+  - FirebaseAnalytics (3.9.0):
+    - FirebaseCore (~> 3.6)
+    - FirebaseInstanceID (~> 1.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseCore (3.6.0):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseInstanceID (1.0.10):
+    - FirebaseCore (~> 3.6)
+  - Google/Analytics (3.1.0):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (3.1.0):
+    - FirebaseAnalytics (~> 3.2)
+  - GoogleAnalytics (3.17.0)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleWebRTC (1.1.23621)
+  - HockeySDK-Source (5.1.2)
+  - IQKeyboardManager (5.0.8)
+  - Kingfisher (4.6.1)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
+  - PhoneNumberKit (2.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
+    - PhoneNumberKit/UIKit (= 2.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.1.0)
+  - PhoneNumberKit/UIKit (2.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - ReverseExtension (0.5.0)
+  - RSKGrowingTextView (3.1.0):
+    - RSKPlaceholderTextView (= 3.1.0)
+  - RSKPlaceholderTextView (3.1.0)
+  - Socket.IO-Client-Swift (13.1.1):
+    - Starscream (~> 3.0.2)
+  - Starscream (3.0.4)
+  - Stripe (12.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Branch
+  - EMPageViewController
+  - Google/Analytics
+  - GoogleWebRTC (= 1.1.23621)
+  - HockeySDK-Source
+  - IQKeyboardManager
+  - Kingfisher
+  - NVActivityIndicatorView
+  - PhoneNumberKit
+  - ReverseExtension
+  - RSKGrowingTextView (= 3.1.0)
+  - Socket.IO-Client-Swift
+  - Stripe
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Branch
+    - EMPageViewController
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - Google
+    - GoogleAnalytics
+    - GoogleToolboxForMac
+    - GoogleWebRTC
+    - HockeySDK-Source
+    - IQKeyboardManager
+    - Kingfisher
+    - NVActivityIndicatorView
+    - PhoneNumberKit
+    - ReverseExtension
+    - RSKGrowingTextView
+    - RSKPlaceholderTextView
+    - Socket.IO-Client-Swift
+    - Starscream
+    - Stripe
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Branch: 127d29ab0a8866025eece1cf9e950ddb6f7d4070
+  EMPageViewController: 8e0abc2b2f53f56a83044527eadbb56bd71ae3e3
+  FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
+  FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
+  FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
+  Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  GoogleWebRTC: a8220d26e272caf95d028f0f390052db10adea35
+  HockeySDK-Source: 0e72e55e35cec26eaba207ec212fd1870961798a
+  IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
+  ReverseExtension: 21c8dd4e767f93b56fb97d873686d24160f83945
+  RSKGrowingTextView: 5cc0aed6d2530b9c9215ac01ee0c9f4d193fa9e6
+  RSKPlaceholderTextView: 78dc8dfe343abec377503edf4689a743d23a4318
+  Socket.IO-Client-Swift: f22222913f29801e30ae0df712db663ec096edc2
+  Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
+  Stripe: c1c4828adf3e078fb08ff56cd93f410c54011c54
+
+PODFILE CHECKSUM: bd8ef3f4f5196e5847357977f027f104e522e6cc
+
+COCOAPODS: 1.5.2

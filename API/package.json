@@ -1,0 +1,47 @@
+{
+  "name": "troovy-backend",
+  "version": "1.9.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "apidoc": "apidoc -e /node_modules -o public/doc/"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "co": "^4.6.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.3",
+    "es6-promisify": "^6.0.0",
+    "express": "~4.15.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "hbs": "~4.0.1",
+    "in-app-purchase": "^1.9.2",
+    "is-mobile": "^1.1.0",
+    "kurento-client": "^6.6.0",
+    "method-override": "^2.3.9",
+    "mjml": "4.0.3",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.17",
+    "mongoose": "^4.11.7",
+    "mongoose-transaction": "0.0.3",
+    "morgan": "~1.8.1",
+    "multer": "^1.3.0",
+    "node-schedule": "^1.3.0",
+    "nodemailer": "^4.6.4",
+    "path-is-absolute": "^1.0.1",
+    "rand-token": "^0.3.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "router": "^1.3.1",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^2.0.3",
+    "sprintf-js": "^1.1.1",
+    "stripe": "^5.1.1",
+    "twilio": "^3.6.2"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6"
+  }
+}

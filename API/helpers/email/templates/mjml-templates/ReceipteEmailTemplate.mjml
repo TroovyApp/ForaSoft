@@ -1,0 +1,71 @@
+<mjml>
+    <mj-head>
+        <mj-attributes>
+            <mj-section padding="0" />
+            <mj-all font-size="100%" font-family="OpenSans, sans-serif" />
+            <mj-class name="header" letter-spacing="0.7px" font-size="2.3rem" font-weight="300" />
+            <mj-class nmae="bold" font-weight="600"/>
+            <mj-class name="baseText" font-size="1rem" line-height="1.5" font-weight="00"/>
+            <mj-class name="footerText" color="a4b0bf"/>
+            <mj-class name="headerText" color="#fff" font-size="1.8rem"  font-weight="300"/>
+            <mj-class name="headerSubtext" color="#fff" font-size="1rem" line-height="1.4rem" font-weight="300"/>
+        </mj-attributes>
+        <mj-style>
+            .accent{ color: #524cfc; }
+            .link{text-decoration:none; color: rgb(105 0 255); font-weight:600;}
+            .footerText{color: #a4b0bf;}
+            .goToButton{border-radius: 4px;padding: .7rem 4.8rem;background-color:#00d8e8;color: #ffffff;}
+            .splash{min-height:600px;}
+        </mj-style>
+    </mj-head>
+    <mj-body>
+        <mj-container background-color="#ffffff" width="800">
+          <mj-wrapper background-color="#f0f0f0"  padding="0">
+            <mj-section background-color="#f0f0f0" background-url="https://lh4.googleusercontent.com/PRJztoVUQV3QFxOfmcAMytRMOS_i3qY3Jjk5bsAUvt_J5gKBeInjWR63MYqmjJAnIYEJDuporgCre9Pk8LtL=w1920-h970-rw"
+              background-size="cover"
+              background-repeat="no-repeat"
+              background-position="top"
+              css-class="splash">
+
+    <mj-column width="100%" padding="40px">
+          <mj-image width="50" height="50" src="https://lh3.googleusercontent.com/jOSH1Esf51dINPpohrL1MXGvCZCSfE6EFV-B__uLZiAUkf22HvB5uyHyaeBzx6yE-vYSFtsygq6Ok7O-4gt8=w1880-h986" align="left" padding-bottom="30"/>
+          <mj-text mj-class="headerText" font-weight="600">Dear ${userName},</mj-text>
+          <mj-text mj-class="headerSubtext">Thank you for subscribing to <span style="font-weight:600">${courseName}</span> </span> <br/>
+          workshop by <span style="font-weight:600">${authorName}</span></mj-text>
+    </mj-column>
+    <mj-column padding="110px 40px 50px 40px" width="100%">
+      <mj-text mj-class="baseText" align="left" color="#fff">
+                            <span style="font-weight:600"> Order Date: ${orderDate}</span>
+                        </mj-text>
+                         <mj-text mj-class="baseText" align="left" color="#fff">
+                                                    <span style="font-weight:600"> Details of payment</span>
+                                                    <br/>
+                                                    Workshop name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${courseName}<br/>
+                                                    Payment method:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${paymentMethod}<br/>
+                                                    Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${total}
+                                                </mj-text>
+    </mj-column>
+
+  </mj-section>
+
+                <mj-section padding="0 40px">
+                    <mj-column>
+
+                        <mj-text mj-class="baseText" align="left" color="#4a4a4a">
+                            Don't forget to attend and ask plenty of questions at the end.<br/>  Our experts love to interact with their audience.
+                        </mj-text>
+                        <mj-text mj-class="baseText" align="left" color="#4a4a4a">
+                            If you have any questions or suggestions on how we can make your<br/> experience better, please contact us at <a href="mailto:info@troovyapp.com" class="link">info@troovyapp.com</a>.
+                        </mj-text>
+                        <mj-text mj-class="baseText" align="left" color="#4a4a4a">
+                            On behalf of all of us at Troovy, thank you for your purchase. <br/> We really appreciate it.
+                        </mj-text>
+                        <mj-text mj-class="baseText" align="left" color="#4a4a4a">
+                           Yours truly, <br/>Troovy Team
+                        </mj-text>
+                    </mj-column>
+                </mj-section>
+            </mj-wrapper>
+        </mj-container>
+    </mj-body>
+</mjml>

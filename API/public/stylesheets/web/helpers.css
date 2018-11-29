@@ -1,0 +1,14 @@
+.animation-hide{
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: visibility 0s, opacity 0.5s, z-index 0.5s linear;
+}
+
+.align-center{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+

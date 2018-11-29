@@ -1,0 +1,44 @@
+platform :ios, '10.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'troovy-ios' do
+    pod 'HockeySDK-Source'
+    pod 'Kingfisher'
+    pod 'Alamofire'
+    pod 'PhoneNumberKit'
+    pod 'Stripe'
+    pod 'Socket.IO-Client-Swift'
+    #pod 'GoogleWebRTC', '1.1.20913'
+    pod 'GoogleWebRTC', '1.1.23621'
+    pod 'ReverseExtension'
+    pod 'Google/Analytics'
+    pod 'Branch'
+
+    pod 'IQKeyboardManager'
+    pod 'EMPageViewController'
+    pod 'RSKGrowingTextView', '3.1.0'
+    pod 'NVActivityIndicatorView'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['ENABLE_BITCODE'] = 'NO'
+        end
+    end
+
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings.delete('CODE_SIGNING_ALLOWED')
+      config.build_settings.delete('CODE_SIGNING_REQUIRED')
+    end
+
+    Dir.glob(installer.sandbox.target_support_files_root + "Pods-*/*.sh").each do |script|
+        flag_name = File.basename(script, ".sh") + "-Installation-Flag"
+        folder = "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+        file = File.join(folder, flag_name)
+        content = File.read(script)
+        content.gsub!(/set -e/, "set -e\nKG_FILE=\"#{file}\"\nif [ -f \"$KG_FILE\" ]; then exit 0; fi\nmkdir -p \"#{folder}\"\ntouch \"$KG_FILE\"")
+        File.write(script, content)
+    end
+end

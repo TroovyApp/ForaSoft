@@ -1,0 +1,9 @@
+'use strict';
+
+module.exports = {
+    SUBSCRIBE_SERVICE_TAX: 0.4,
+    SUBSCRIBE_STRIPE_TAX: 0.08,
+    PAYOUT_SERVICE_TAX: 0,
+    MINIMUM_PAYOUT_AMOUNT: 20,
+    DEFAULT_CURRENCY: 'USD'
+};

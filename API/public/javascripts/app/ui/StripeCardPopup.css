@@ -1,0 +1,41 @@
+.StripeElement {
+    background-color: rgb(247, 250, 253);
+    padding: 0.75rem;
+    line-height: 43px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.card {
+    margin-bottom: 1rem;
+}
+
+.card-error-label {
+    margin: -0.5rem 0.5rem 1.5rem;
+}
+
+.two-col {
+    display: flex;
+    align-items: flex-start;
+}
+
+.two-col > .field:nth-child(1) {
+    flex: 2;
+    margin-right: 0.5rem;
+}
+
+.two-col > .field:nth-child(2) {
+    flex: 1;
+}
+
+.card-cvc {
+    width: 100%;
+    padding-right: 0;
+}
+
+.card-errors {
+    margin-bottom: 1rem;
+    margin-top: -0.25rem;
+}
